@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hide's portofolio</title>
+    <title>hide's Portfolio</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Source Code Pro', monospace;
             background-color: #111;
             color: #fff;
-        }
-
-        #container {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             height: 100vh;
         }
 
@@ -27,20 +24,27 @@
             border-radius: 15px;
             padding: 20px;
             text-align: center;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
         #panel:hover {
             background-color: #222;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
         }
 
         #name {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             margin-bottom: 5px;
         }
 
         #discord {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #pronouns {
             font-size: 18px;
             margin-bottom: 10px;
         }
@@ -48,6 +52,7 @@
         #description {
             font-size: 16px;
             margin-bottom: 20px;
+            white-space: pre-line; /* Preserve line breaks in the description */
         }
 
         #projects-btn {
@@ -68,14 +73,12 @@
 </head>
 <body>
 
-<div id="container">
-    <div id="panel">
-        <div id="name">Hiya! I'm Hide</div>
-        <div id="discord">Discord: hide.__.</div>
-        <div id="pronouns">pronouns: she/her</div>
-        <div id="description">I go by hide online, im a software engineer student and I love to code. I usually code anticheats for minecraft servers or cheats for minecraft & fortnite.</div>
-        <a id="projects-btn" href="#">Projects</a>
-    </div>
+<div id="panel">
+    <div id="name">Hiya! I'm hide</div>
+    <div id="discord">discord: hide.__.</div>
+    <div id="pronouns">pronouns: she/her</div>
+    <div id="description">I go by hide online,<br>I'm a software engineering student,<br>and I love to code. I usually code anticheats for Minecraft servers or cheats for Minecraft & Fortnite.</div>
+    <a id="projects-btn" href="#">Projects</a>
 </div>
 
 </body>
