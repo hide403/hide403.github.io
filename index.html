@@ -71,6 +71,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -82,6 +83,7 @@
         #projects-section {
             margin-top: 30px;
             text-align: center;
+            display: none; /* Hide the projects section by default */
         }
 
         .project {
@@ -104,18 +106,18 @@
 <body>
 
 <div id="panel">
-    <img id="profile-picture" src="5fcae6754349da1d319d5668722f4b40.jpg" alt="pfp">
+    <img id="profile-picture" src="your-profile-image.jpg" alt="Profile Picture">
     <div id="name">Hiya! I'm hide</div>
     <div id="discord">discord: hide.__.</div>
     <div id="pronouns">pronouns: she/her</div>
     <div id="description">I go by hide online,<br>I'm a software engineering student,<br>and I love to code.<br> I usually code anticheats for Minecraft,<br> or cheats for Minecraft & Fortnite.</div>
-    <a id="projects-btn" href="#projects-section">Projects</a>
+    <div id="projects-btn">Projects</div>
 </div>
 
 <div id="projects-section">
     <div class="project">
-        <h2>Kayai Anticheat</h2>
-        <p>Kayai Anticheat is an advanced private anticheat still in development.<br> Checkout anticheat tests at: https://www.youtube.com/channel/UCtHGIFaCsRbpKkRcBQ1QY0g</p>
+        <h2>Project 1</h2>
+        <p>Description of Project 1 goes here.</p>
     </div>
 
     <div class="project">
@@ -126,6 +128,22 @@
     <!-- Add more projects as needed -->
 
 </div>
+
+<script>
+    document.getElementById('projects-btn').addEventListener('click', function() {
+        // Toggle visibility of the projects section
+        var projectsSection = document.getElementById('projects-section');
+        projectsSection.style.display = (projectsSection.style.display === 'none' || projectsSection.style.display === '') ? 'block' : 'none';
+
+        // Perform smooth scroll to the projects section
+        if (projectsSection.style.display === 'block') {
+            window.scrollTo({
+                top: projectsSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
